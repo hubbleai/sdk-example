@@ -71,7 +71,7 @@ function App() {
 
   const [apiKey, setApiKey] = useState('');
   const [customerId, setCustomerId] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   function renderActiveComponent(action) {
     const ActiveComponent = COMPONENT_MAP[action];
@@ -96,7 +96,7 @@ function App() {
     <div className="w-full h-screen flex flex-row ">
       {isLoggedIn ? (
         <>
-          <Sidebar setActionForm={setActionForm} />
+          <Sidebar setActionForm={setActionForm} actionForm={actionForm} />
           {renderActiveComponent(actionForm)}
           <OutputRenderer data={jsonResponse} isLoading={isLoading} />
         </>

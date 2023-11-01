@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Carbon Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a demo app creating using [Carbon](https://www.carbon.ai)'s Vanilla JS [SDK](https://www.npmjs.com/package/carbon-connect-js). This app is a simple demo of how to use the SDK to create a Carbon Connect app.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, clone this repo and run `npm install` to install the dependencies. Then, run `npm start` to start the app. You can then visit `http://localhost:3000` to see the app running.
 
-### `npm start`
+## Using the demo app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can visit the demo app [here](https://sdk-example-theta.vercel.app/). The app expects your API key and the customer-id you would want to test with. After your provide the values and click on `Try Carbon`, you can see the list of test actions you can perform. Please note that you have to generate the access token before using any protected endpoints. You can do so by clicking on the `Generate Access Token` button. Once the access token is generated, it is stored in the app's state and used for all the other requests.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Using the SDK
 
-### `npm test`
+The SDK is available as a [npm package](https://www.npmjs.com/package/carbon-connect-js). To use it, simply install it using `npm install carbon-connect-js` and then import it into your app using `import * as Carbon from 'carbon-connect-js'`. You can then use the SDK to make requests to the Carbon API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Documentation
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The documentation for the SDK is available [here](https://api.carbon.ai/redoc#section/Javascript-SDK).

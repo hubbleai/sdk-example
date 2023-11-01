@@ -165,10 +165,12 @@ const MenuData = [
   // },
 ];
 
-const MenuItem = ({ label, onClickHandler = () => {} }) => {
+const MenuItem = ({ label, isCurrent, onClickHandler = () => {} }) => {
   return (
     <div
-      class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 rounded-md cursor-pointer space-x-2"
+      class={`flex items-center justify-start p-2 my-4 text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 rounded-md cursor-pointer space-x-2 ${
+        isCurrent ? 'font-bold' : 'font-medium'
+      }`}
       onClick={onClickHandler}
     >
       <span class="text-left">
@@ -190,7 +192,7 @@ const MenuItem = ({ label, onClickHandler = () => {} }) => {
   );
 };
 
-const MenuGroup = ({ label, children, setActionForm }) => {
+const MenuGroup = ({ label, children, setActionForm, actionForm }) => {
   return (
     <div>
       <p class="w-full pb-2 mb-4  font-normal text-gray-300 border-b-2 border-gray-100 text-md">
@@ -200,6 +202,7 @@ const MenuGroup = ({ label, children, setActionForm }) => {
         return (
           <MenuItem
             label={child.label}
+            isCurrent={child.action === actionForm}
             onClickHandler={() => {
               setActionForm(child.action);
             }}
@@ -210,7 +213,7 @@ const MenuGroup = ({ label, children, setActionForm }) => {
   );
 };
 
-const Sidebar = ({ setActionForm }) => {
+const Sidebar = ({ actionForm, setActionForm }) => {
   return (
     <div class="relative bg-white dark:bg-gray-800 w-2/12">
       <div class="flex flex-col sm:flex-row sm:justify-around">
@@ -228,6 +231,7 @@ const Sidebar = ({ setActionForm }) => {
                   label={menuGroup.label}
                   children={menuGroup.children}
                   setActionForm={setActionForm}
+                  actionForm={actionForm}
                 />
               );
             })}
