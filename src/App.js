@@ -71,7 +71,7 @@ function App() {
 
   const [apiKey, setApiKey] = useState('');
   const [customerId, setCustomerId] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   function renderActiveComponent(action) {
     const ActiveComponent = COMPONENT_MAP[action];
